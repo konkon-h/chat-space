@@ -1,3 +1,18 @@
 .side
   .side__top
+    .side__top__name
+      Techcamp
+    .side__top__icon
+      .side__top__icon--edit
+        = link_to root_path do
+          = icon('fas', 'edit', class: 'side__top__icon--color')
+      .side__top__icon--cog
+        = link_to root_path do
+          = icon('fas', 'cog', class: 'side__top__icon--color')
+
   .side__group
+    .side__group__one
+      .side__group__one--grp-name
+        Techcamp
+      .side__group__one--last-msg
+        TC
