@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+}
+
+.side{
+  height: 100%;
+  width: 300px;
+  background-color: #253141;
+  float: left;
+
+  &__top{
+    height: 100px;
+    width: 100%;
+  }
+  &__group{
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-color: #2f3e51;
+  }
+}
+
+.chat{
+  height: 100%;
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+  float: right;
+  &__top{
+    height: 100px;
+    width: 100%;
+    border-bottom: medium solid #eeeeee;
+  }
+  &__main{
+    height: calc(100vh - 100px - 90px);
+    width: 100%;
+    background-color: #fafafa;
+
+  }
+  &__form{
+    height: 90px;
+    width: 100%;
+    background-color: #d2d2d2;
+  }
+}
