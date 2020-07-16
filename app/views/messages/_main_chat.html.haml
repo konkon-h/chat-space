@@ -1,4 +1,31 @@
 .chat
   .chat__top
+    .chat__top__index
+      .chat__top__index--gpname
+        test
+      .chat__top__index--member
+        A
+    .chat__top__edit
+      = link_to root_path do
+        Edit
+
   .chat__main
-  .chat__form
+    .chat__main__one
+      .chat__main__one__user
+        .chat__main__one__user--name
+          A
+        .chat__main__one__user--date
+          2020
+      .chat__main__one--msg
+        Hello
+
+  .chat__bottom
+    = form_with(url: root_path, class: "chat__bottom__submit") do |form|
+      .chat__bottom__submit__form
+        = form.text_field :text, placeholder: "Type a Message",  class: "chat__bottom__submit__form--fmsg"
+        = form.label :image, class: "chat__bottom__submit__form--fimg" do
+          -# %i.fa.fa-image
+          %i.fa.fa-image.fa-2x
+          -# = icon('fas', 'image' )
+          = form.file_field :image
+      = form.submit "Send", class: "chat__bottom__submit--btn"
