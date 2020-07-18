@@ -1,13 +1,13 @@
 .side
   .side__top
     .side__top__name
-      Techcamp
+      = current_user.name
     .side__top__icon
       .side__top__icon--edit
         = link_to root_path do
           = icon('fas', 'edit', class: 'side__top__icon--color')
       .side__top__icon--cog
-        = link_to root_path do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'side__top__icon--color')
 
   .side__group
