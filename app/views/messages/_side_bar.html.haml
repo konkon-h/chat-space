@@ -4,7 +4,7 @@
       = current_user.name
     .side__top__icon
       .side__top__icon--edit
-        = link_to root_path do
+        = link_to new_group_path do
           = icon('fas', 'edit', class: 'side__top__icon--color')
       .side__top__icon--cog
         = link_to edit_user_path(current_user) do
