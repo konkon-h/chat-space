@@ -11,8 +11,10 @@
           = icon('fas', 'cog', class: 'side__top__icon--color')
 
   .side__group
-    .side__group__one
-      .side__group__one--grp-name
-        Techcamp
-      .side__group__one--last-msg
-        TC
+    - current_user.groups.each do |group|
+      .side__group__one
+        = link_to '#' do
+          .side__group__one--grp-name
+            = group.name
+          .side__group__one--last-msg
+            メッセージはまだありません
